@@ -1,14 +1,20 @@
 package com.finersoft.chap02;
 
-// 给变量赋值并显示该值
-
+/**
+ * 名称：示例类<br />
+ * 说明： 给变量赋值并显示该值
+ * 
+ * @author Finersoft
+ * @date 2018年3月23日
+ */
 class Variable {
 
 	public static void main(String[] args) {
-		int x;			// x是int型变量
-
-		x = 63;			// 把63赋给x
-
-		System.out.println(x);			 // 显示x的值
+		// x是int型变量
+		int x;
+		// 把63赋给x
+		x = 63;
+		// 显示x的值
+		System.out.println(x);
 	}
 }

@@ -3,7 +3,7 @@ package com.finersoft.chap02;
 import java.util.Scanner;
 
 /**
- * 名称：小数算术
+ * 名称：小数算术 <br />
  * 说明：读入两个实数值，并显示加减乘除运算的结果
  * @author Finersoft
  * @date 2018年3月22日

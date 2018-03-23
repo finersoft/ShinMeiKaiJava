@@ -1,7 +1,8 @@
 package com.finersoft.chap02;
 
 /**
- * 名称： 显示变量x和y的合计值与平均值（错误） 说明：
+ * 名称：示例类 <br />
+ * 说明：显示变量x和y的合计值与平均值（错误） 
  * 
  * @author Finersoft
  * @date 2018年3月21日
