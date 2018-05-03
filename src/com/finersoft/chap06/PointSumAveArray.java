@@ -7,18 +7,25 @@ class PointSumAveArray {
 
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
-		int sum = 0;					// 总分
-		final int ninzu = 5;			// 人数
-		int[] tensu = new int[ninzu];	// 分数
-
-		System.out.println("请输入" + ninzu + "名学生的分数。");
-		for (int i = 0; i < ninzu; i++) {
-			System.out.print((i + 1) + "号的分数：");
-			tensu[i] = stdIn.nextInt();		// 读入tensu[i]
-			sum += tensu[i];				// 将tensu[i]加到sum上
+		try {
+			int sum = 0; // 总分
+			final int ninzu = 5; // 人数
+			int[] tensu = new int[ninzu]; // 分数
+			System.out.println("请输入" + ninzu + "名学生的分数。");
+			for (int i = 0; i < ninzu; i++) {
+				System.out.print((i + 1) + "号的分数：");
+				tensu[i] = stdIn.nextInt(); // 读入tensu[i]
+				sum += tensu[i]; // 将tensu[i]加到sum上
+			}
+			System.out.println("总分为" + sum + "分。");
+			System.out.println("平均分为" + (double) sum / ninzu + "分。");
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			if (stdIn != null) {
+				stdIn.close();
+			}
 		}
-
-		System.out.println("总分为" + sum + "分。");
-		System.out.println("平均分为" + (double)sum / ninzu + "分。");
 	}
 }

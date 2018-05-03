@@ -9,10 +9,12 @@ public class VideoPlayer implements Player {
 		id = ++count;
 	}
 
-	public void play() {									// ○播放
+	@Override
+		public void play() {									// ○播放
 		System.out.println("■视频播放开始！"); 
 	}
 
+	@Override
 	public void stop() {									// ○停止
 		System.out.println("■视频播放结束！"); 
 	}

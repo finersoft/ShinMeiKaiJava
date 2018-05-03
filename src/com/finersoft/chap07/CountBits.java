@@ -24,11 +24,19 @@ class CountBits {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("整数：");
-		int x = stdIn.nextInt();
-
-		System.out.print("位构成 = ");
-		printBits(x);
-		System.out.println("\n值为1的位数 = " + countBits(x));
+		try {
+			System.out.print("整数：");
+			int x = stdIn.nextInt();
+			System.out.print("位构成 = ");
+			printBits(x);
+			System.out.println("\n值为1的位数 = " + countBits(x));
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			if (stdIn != null) {
+				stdIn.close();
+			}
+		}
 	}
 }

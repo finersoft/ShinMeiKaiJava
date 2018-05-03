@@ -2,12 +2,18 @@ package com.finersoft.player;
 
 //===== ＣＤ播放器 =====//
 public class CDPlayer implements Player {
-
-	public void play() {						// ○播放
+	/** (non-Javadoc)○播放
+	 * @see com.finersoft.player.Player#play()
+	 */
+	@Override
+	public void play() {						
 		System.out.println("□ＣＤ播放开始！"); 
 	}
-
-	public void stop() {						// ○停止
+	/** (non-Javadoc)○停止
+	 * @see com.finersoft.player.Player#stop()
+	 */
+	@Override
+	public void stop() {						
 		System.out.println("□ＣＤ播放结束！"); 
 	}
 

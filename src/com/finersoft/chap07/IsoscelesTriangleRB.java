@@ -14,14 +14,22 @@ class IsoscelesTriangleRB {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.println("显示直角在右下方的三角形。");
-		System.out.print("层数：");
-		int n = stdIn.nextInt();
-
-		for (int i = 1; i <= n; i++) {
-			putChars(' ', n - i);		// 显示n - i个' '
-			putChars('+', i);			// 显示i个'+'
-			System.out.println();
+		try {
+			System.out.println("显示直角在右下方的三角形。");
+			System.out.print("层数：");
+			int n = stdIn.nextInt();
+			for (int i = 1; i <= n; i++) {
+				putChars(' ', n - i); // 显示n - i个' '
+				putChars('+', i); // 显示i个'+'
+				System.out.println();
+			} 
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			if (stdIn != null) {
+				stdIn.close();
+			}
 		}
 	}
 }

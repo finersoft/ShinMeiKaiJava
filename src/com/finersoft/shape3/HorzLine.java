@@ -21,6 +21,7 @@ public class HorzLine extends AbstLine {
 	 * @return 返回字符串"HorzLine(length:3)"。
 	 *			3的部分是长度所对应的值。
 	*/
+	@Override
 	public String toString() {
 		return "HorzLine(length:" + getLength() + ")"; 
 	}
@@ -30,7 +31,8 @@ public class HorzLine extends AbstLine {
      * 通过横向排列减号'-'进行绘图。
 	 * 连续显示长度个数的'-'，并换行。
 	*/
-	public void draw() {
+	@Override
+		public void draw() {
 		for (int i = 1; i <= getLength() ; i++)
 			System.out.print('-'); 
 		System.out.println(); 

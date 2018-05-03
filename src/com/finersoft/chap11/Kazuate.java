@@ -9,22 +9,28 @@ class Kazuate {
 		Random rand = new Random();
 		Scanner stdIn = new Scanner(System.in);
 
-		int no = rand.nextInt(100);	 // 目标数字：生成一个0～99的随机数
+		try {
+			int no = rand.nextInt(100); // 目标数字：生成一个0～99的随机数
+			System.out.println("猜数字游戏开始!!");
+			System.out.println("请猜一个0～99的数字。");
+			int x; // 玩家输入的数字
+			do {
+				System.out.print("是多少呢：");
+				x = stdIn.nextInt();
 
-		System.out.println("猜数字游戏开始!!");
-		System.out.println("请猜一个0～99的数字。");
-
-		int x;						// 玩家输入的数字
-		do {
-			System.out.print("是多少呢：");
-			x = stdIn.nextInt();
-
-			if (x > no)
-				System.out.println("再小一点。");
-			else if (x < no)
-				System.out.println("再大一点。");
-		} while (x != no);
-
-		System.out.println("回答正确。");
+				if (x > no)
+					System.out.println("再小一点。");
+				else if (x < no)
+					System.out.println("再大一点。");
+			} while (x != no);
+			System.out.println("回答正确。");
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			if (stdIn != null) {
+				stdIn.close();
+			}
+		}
 	}
 }

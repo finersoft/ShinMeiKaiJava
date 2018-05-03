@@ -14,6 +14,7 @@ public abstract class Shape {
 	 * 在类Shape派生的类中实现该方法的主体。
 	 * 该方法将java.lang.Object类中的方法重写为抽象方法。
 	*/
+	@Override
 	public abstract String toString();
 
 	/**

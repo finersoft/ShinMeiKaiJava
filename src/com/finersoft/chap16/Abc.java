@@ -4,11 +4,21 @@ import java.util.Scanner;
 
 //---- 自己创建的检查异常 ---//
 class CheckedException extends Exception {
+	/**
+	 * serialVersionUID
+	 */
+	private static final long serialVersionUID = -339884060437286312L;
+
 	CheckedException(String s, Throwable e) { super(s, e); }
 }
 
 //---- 自己创建的非检查异常 ---//
 class UncheckedException extends RuntimeException {
+	/**
+	 * serialVersionUID
+	 */
+	private static final long serialVersionUID = 8383931792950421893L;
+
 	UncheckedException(String s, Throwable e) { super(s, e); }
 }
 
@@ -47,6 +57,10 @@ public class Abc {
 			System.out.println("异常　　　：" + e);
 			System.out.println("异常原因  ：" + e.getCause());
 			e.printStackTrace();
+		} finally {
+			if (stdIn != null) {
+				stdIn.close();
+			}
 		}
 	}
 }

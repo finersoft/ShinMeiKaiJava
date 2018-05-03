@@ -31,7 +31,11 @@ class RobotPet extends Pet {
 		super(name, masterName);		// 超类的构造函数
 	}
 
-	// 自我介绍
+ 
+	/** 自我介绍(non-Javadoc)
+	 * @see com.finersoft.pet.Pet#introduce()
+	 */
+	@Override
 	public void introduce() {
 		System.out.println("◇我是机器人。名字是" + getName() + "。"); 
 		System.out.println("◇我的主人是" + getMasterName() + "。");

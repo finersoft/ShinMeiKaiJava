@@ -16,6 +16,10 @@ class XY {
 	public XY(int x)        { this.x = x; }
 	public XY(int x, int y) { this.x = x; this.y = y; }
 
+	/** (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
 	public String toString() {
 		return "No." + id + " … (" + x  + ", " + y + ")";
 	}

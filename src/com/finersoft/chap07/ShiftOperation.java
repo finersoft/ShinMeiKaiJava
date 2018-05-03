@@ -14,12 +14,26 @@ class ShiftOperation {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("整数：");			int x = stdIn.nextInt();
-		System.out.print("移位的位数：");	int n = stdIn.nextInt();
-
-		System.out.print(  "整数    = ");  printBits(x);
-		System.out.print("\nx <<  n = ");  printBits(x << n);
-		System.out.print("\nx >>  n = ");  printBits(x >> n);
-		System.out.print("\nx >>> n = ");  printBits(x >>> n);
+		try {
+			System.out.print("整数：");
+			int x = stdIn.nextInt();
+			System.out.print("移位的位数：");
+			int n = stdIn.nextInt();
+			System.out.print("整数    = ");
+			printBits(x);
+			System.out.print("\nx <<  n = ");
+			printBits(x << n);
+			System.out.print("\nx >>  n = ");
+			printBits(x >> n);
+			System.out.print("\nx >>> n = ");
+			printBits(x >>> n);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			if (stdIn != null) {
+				stdIn.close();
+			}
+		}
 	}
 }

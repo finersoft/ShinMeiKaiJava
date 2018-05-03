@@ -21,14 +21,24 @@ class Max {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("x的值：");  int x = stdIn.nextInt();
-		System.out.print("y的值：");  int y = stdIn.nextInt();
-		System.out.print("z的值：");  int z = stdIn.nextInt();
-
-		// 两个值中的最大值
-		System.out.println("x, y中的最大值是" + max(x, y) + "。");
-
-		// 三个值中的最大值
-		System.out.println("x, y, z中的最大值是" + max(x, y, z) + "。");
+		try {
+			System.out.print("x的值：");
+			int x = stdIn.nextInt();
+			System.out.print("y的值：");
+			int y = stdIn.nextInt();
+			System.out.print("z的值：");
+			int z = stdIn.nextInt();
+			// 两个值中的最大值
+			System.out.println("x, y中的最大值是" + max(x, y) + "。");
+			// 三个值中的最大值
+			System.out.println("x, y, z中的最大值是" + max(x, y, z) + "。");
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			if (stdIn != null) {
+				stdIn.close();
+			}
+		}
 	}
 }

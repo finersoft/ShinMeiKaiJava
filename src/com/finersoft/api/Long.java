@@ -1,9 +1,20 @@
 package com.finersoft.api;
 
 public final class Long extends Number implements Comparable<Long> {
-	public static final long MIN_VALUE = 0x8000000000000000L; // long型的最小值
-	public static final long MAX_VALUE = 0x7fffffffffffffffL; // long型的最大值
-	//...
+	/**
+	 * serialVersionUID
+	 */
+	private static final long serialVersionUID = -2074724937263859795L;
+	/**
+	 *  long型的最小值
+	 */
+	public static final long MIN_VALUE = 0x8000000000000000L; 
+	
+	
+	/**
+	 *  long型的最大值
+	 */
+	public static final long MAX_VALUE = 0x7fffffffffffffffL; 
 
 
 	public static void main(String[] args) {

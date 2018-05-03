@@ -16,9 +16,19 @@ class Max2Method {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("整数a：");  int a = stdIn.nextInt();
-		System.out.print("整数b：");  int b = stdIn.nextInt();
-
-		System.out.println("最大值是" + max2(a, b) + "。");
+		try {
+			System.out.print("整数a：");
+			int a = stdIn.nextInt();
+			System.out.print("整数b：");
+			int b = stdIn.nextInt();
+			System.out.println("最大值是" + max2(a, b) + "。");
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			if (stdIn != null) {
+				stdIn.close();
+			}
+		}
 	}
 }

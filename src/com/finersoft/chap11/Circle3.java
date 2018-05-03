@@ -10,9 +10,18 @@ class Circle3 {
 
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(in);
-		out.println("计算圆的面积。");
-		out.print("半径：");
-		double r = stdIn.nextDouble();
-		out.println("面积为" + (PI * r * r) + "。");
+		try {
+			out.println("计算圆的面积。");
+			out.print("半径：");
+			double r = stdIn.nextDouble();
+			out.println("面积为" + (PI * r * r) + "。");
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			if (stdIn != null) {
+				stdIn.close();
+			}
+		}
 	}
 }

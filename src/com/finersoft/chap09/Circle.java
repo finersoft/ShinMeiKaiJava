@@ -20,6 +20,10 @@ public class Circle {
 	}
 	public void setRadius(int radius) { this.radius = radius; }
 
+	/** (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
 	public String toString() {
 		return "圆心坐标：" + center.toString() + " 半径：" + radius; 
 	}

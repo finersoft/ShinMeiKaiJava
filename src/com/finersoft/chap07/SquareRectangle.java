@@ -30,13 +30,24 @@ class SquareRectangle {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.println("显示正方形。");
-		System.out.print("边长：");  int n = stdIn.nextInt();
-		putSquare(n);						// 显示正方形
-
-		System.out.println("显示长方形。");
-		System.out.print("宽：");  int h = stdIn.nextInt();
-		System.out.print("长：");  int w = stdIn.nextInt();
-		putRectangle(h, w);					// 显示长方形
+		try {
+			System.out.println("显示正方形。");
+			System.out.print("边长：");
+			int n = stdIn.nextInt();
+			putSquare(n); // 显示正方形
+			System.out.println("显示长方形。");
+			System.out.print("宽：");
+			int h = stdIn.nextInt();
+			System.out.print("长：");
+			int w = stdIn.nextInt();
+			putRectangle(h, w); // 显示长方形
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			if (stdIn != null) {
+				stdIn.close();
+			}
+		}
 	}
 }

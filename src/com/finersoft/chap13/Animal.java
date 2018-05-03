@@ -6,6 +6,11 @@ public abstract class Animal {
 	public Animal(String name) { this.name = name; }
 
 	public abstract void bark();		// 叫
+	
+	/** (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
 	public abstract String toString();	// 返回字符串表示
 
 	public String getName() { return name; }

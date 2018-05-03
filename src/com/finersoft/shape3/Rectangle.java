@@ -34,6 +34,7 @@ public class Rectangle extends Shape implements Plane2D {
 	 * @return 返回字符串"Rectangle(width:4, height:3)"。
 	 *			4和3这两部分分别对应长和宽的值。
 	*/
+	@Override
 	public String toString() {
 		return "Rectangle(width:" + width + ", height:" + height + ")"; 
 	}
@@ -43,6 +44,7 @@ public class Rectangle extends Shape implements Plane2D {
      * 通过排列星号'*'进行绘图。
 	 * 循环width次显示长度个数的'*'并换行。
 	*/
+	@Override
 	public void draw() {
 		for (int i = 1; i <= height; i++) {
 			for (int j = 1; j <= width; j++)
@@ -51,5 +53,6 @@ public class Rectangle extends Shape implements Plane2D {
 		}
 	}
 
+	@Override
 	public int getArea() { return width * height; }		// ○计算面积
 }

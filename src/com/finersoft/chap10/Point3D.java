@@ -21,6 +21,10 @@ public class Point3D {
 
 	public int getId() { return id; }
 
+	/** (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
 	public String toString() {
 		return "(" + x  + "," + y + "," + z + ")";
 	}

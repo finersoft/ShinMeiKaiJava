@@ -54,7 +54,12 @@ public class Day {
 		return year == d.year && month == d.month && date == d.date;
 	}
 
-	//--- 返回字符串的表示 ---//
+	/**
+	 * 返回字符串表示 (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
 	public String toString() {
 		String[] wd = {"日", "一", "二", "三", "四", "五", "六"};
 		return String.format("%04d年%02d月%02d日(%s)", 

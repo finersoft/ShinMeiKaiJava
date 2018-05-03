@@ -10,23 +10,32 @@ class ReverseArray {
 		Random rand = new Random();
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("元素个数：");
-		int n = stdIn.nextInt();  // 读入元素个数
-		int[] a = new int[n];	  // 声明数组
-
-		for (int i = 0; i < n; i++) {
-			a[i] = 10 + rand.nextInt(90);
-			System.out.println("a[" + i + "] = " + a[i]);
+		try {
+			System.out.print("元素个数：");
+			// 读入元素个数
+			int n = stdIn.nextInt(); 
+			// 声明数组
+			int[] a = new int[n]; 
+			for (int i = 0; i < n; i++) {
+				a[i] = 10 + rand.nextInt(90);
+				System.out.println("a[" + i + "] = " + a[i]);
+			}
+			for (int i = 0; i < n / 2; i++) {
+				int t = a[i];
+				a[i] = a[n - i - 1];
+				a[n - i - 1] = t;
+			}
+			System.out.println("元素的倒序排列执行完毕。");
+			for (int i = 0; i < n; i++) {
+				System.out.println("a[" + i + "] = " + a[i]);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			if (stdIn != null) {
+				stdIn.close();
+			}
 		}
-
-		for (int i = 0; i < n / 2; i++) {
-			int t = a[i];
-			a[i] = a[n - i - 1];
-			a[n - i - 1] = t;
-		}
-
-		System.out.println("元素的倒序排列执行完毕。");
-		for (int i = 0; i < n; i++)
-			System.out.println("a[" + i + "] = " + a[i]);
 	}
 }

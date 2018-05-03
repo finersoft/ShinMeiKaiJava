@@ -1,8 +1,18 @@
 package com.finersoft.api;
 
 public final class Short extends Number implements Comparable<Short> {
-	public static final short MIN_VALUE = -32768;		// short型的最小值
-	public static final short MAX_VALUE = 32767;		// short型的最大值
+	/**
+	 * serialVersionUID
+	 */
+	private static final long serialVersionUID = -5906587052455791377L;
+	/**
+	 *  short型的最小值
+	 */
+	public static final short MIN_VALUE = -32768;		
+	/**
+	 * short型的最大值
+	 */
+	public static final short MAX_VALUE = 32767;		
 	//...
 
 

@@ -22,6 +22,7 @@ public class Point extends Shape {
      * 返回的字符串总是"Point"。
 	 * @return 返回字符串"Point"。
 	*/
+	@Override
 	public String toString() {
 		return "Point"; 
 	}
@@ -30,6 +31,7 @@ public class Point extends Shape {
 	 * 方法draw用于绘制点。
 	 * 只显示一个加号'+'，并换行。
 	*/
+	@Override
 	public void draw() {
 		System.out.println('+'); 
 	}

@@ -16,22 +16,28 @@ class LinearSearch {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("元素个数：");
-		int num = stdIn.nextInt();
-		int[] x = new int[num];		// 元素个数为num的数组
-
-		for (int i = 0; i < num; i++) {
-			System.out.print("x[" + i + "]：");
-			x[i] = stdIn.nextInt();
+		try {
+			System.out.print("元素个数：");
+			int num = stdIn.nextInt();
+			int[] x = new int[num]; // 元素个数为num的数组
+			for (int i = 0; i < num; i++) {
+				System.out.print("x[" + i + "]：");
+				x[i] = stdIn.nextInt();
+			}
+			System.out.print("要查找的值："); // 读入键值
+			int ky = stdIn.nextInt();
+			int idx = linearSearch(x, ky); // 查找数组x中值为ky的元素
+			if (idx == -1)
+				System.out.println("不存在该值的元素。");
+			else
+				System.out.println("该值的元素是" + "x[" + idx + "]。");
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			if (stdIn != null) {
+				stdIn.close();
+			}
 		}
-		System.out.print("要查找的值：");		// 读入键值
-		int ky = stdIn.nextInt();
-
-		int idx = linearSearch(x, ky);	// 查找数组x中值为ky的元素
-
-		if (idx == -1)
-			System.out.println("不存在该值的元素。");
-		else
-			System.out.println("该值的元素是" + "x[" + idx + "]。");
 	}
 }

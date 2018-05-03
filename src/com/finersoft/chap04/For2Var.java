@@ -8,10 +8,18 @@ class For2Var {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("整数值：");
-		int n = stdIn.nextInt();
-
-		for (int i = 1, j = n - 1; i <= n; i++, j--)
-			System.out.println(i + " " + j);
+		try {
+			System.out.print("整数值：");
+			int n = stdIn.nextInt();
+			for (int i = 1, j = n - 1; i <= n; i++, j--) {
+				System.out.println(i + " " + j);
+			} 
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (stdIn != null) {
+				stdIn.close();
+			}
+		}
 	}
 }

@@ -11,9 +11,17 @@ class Id {
 		id = ++counter;			// 标识编号
 	}
 
-	//--- 获取标识编号 ---//
+
+	/**
+	 * 获取标识编号
+	 * @return
+	 */
 	public int getId() {
 		return id;
+	}
+	
+	public int getCount() {
+		return counter;
 	}
 }
 
@@ -27,7 +35,7 @@ public class IdTester {
 		System.out.println("b的标识编号：" + b.getId());
 
 		System.out.println("Id.counter = " + Id.counter);
-		System.out.println("a.counter  = " +  a.counter);
-		System.out.println("b.counter  = " +  b.counter);
+		System.out.println("a.counter  = " +  a.getCount());
+		System.out.println("b.counter  = " +  b.getCount());
 	}
 }

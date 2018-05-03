@@ -14,16 +14,32 @@ class BitwiseOperation {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.println("请输入两个整数。");
-		System.out.print("a : ");   int a = stdIn.nextInt();
-		System.out.print("b : ");   int b = stdIn.nextInt();
-
-		System.out.print(  "a     = ");  printBits(a);
-		System.out.print("\nb     = ");  printBits(b);
-		System.out.print("\na & b = ");  printBits(a & b);	// 逻辑与
-		System.out.print("\na | b = ");  printBits(a | b);	// 逻辑或
-		System.out.print("\na ^ b = ");  printBits(a ^ b);	// 逻辑异或
-		System.out.print("\n~a    = ");  printBits(~a);		// 补数
-		System.out.print("\n~b    = ");  printBits(~b);		// 补数
+		try {
+			System.out.println("请输入两个整数。");
+			System.out.print("a : ");
+			int a = stdIn.nextInt();
+			System.out.print("b : ");
+			int b = stdIn.nextInt();
+			System.out.print("a     = ");
+			printBits(a);
+			System.out.print("\nb     = ");
+			printBits(b);
+			System.out.print("\na & b = ");
+			printBits(a & b); // 逻辑与
+			System.out.print("\na | b = ");
+			printBits(a | b); // 逻辑或
+			System.out.print("\na ^ b = ");
+			printBits(a ^ b); // 逻辑异或
+			System.out.print("\n~a    = ");
+			printBits(~a); // 补数
+			System.out.print("\n~b    = ");
+			printBits(~b); // 补数
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (stdIn != null) {
+				stdIn.close();
+			}
+		}
 	}
 }

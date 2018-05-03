@@ -2,16 +2,31 @@ package com.finersoft.player;
 
 //===== ＤＶＤ播放器 =====//
 class DVDPlayer implements ExPlayer {
-
-	public void play() {									// ○播放 
+	/*
+	 * (non-Javadoc) ○播放
+	 * 
+	 * @see com.finersoft.player.Player#play()
+	 */
+	@Override
+	public void play() {
 		System.out.println("■ＤＶＤ播放开始！");
 	}
 
-	public void stop() {									// ○停止
-		System.out.println("■ＤＶＤ播放结束！"); 
+	/*
+	 * (non-Javadoc) ○停止
+	 * 
+	 * @see com.finersoft.player.Player#stop()
+	 */
+	@Override
+	public void stop() {
+		System.out.println("■ＤＶＤ播放结束！");
 	}
 
-	public void slow() {									// ●慢放
-		System.out.println("■ＤＶＤ慢放开始！"); 
+	/* (non-Javadoc) ●慢放
+	 * @see com.finersoft.player.ExPlayer#slow()
+	 */
+	@Override
+	public void slow() { 
+		System.out.println("■ＤＶＤ慢放开始！");
 	}
 }

@@ -51,11 +51,18 @@ class LastTime1 {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		init();				// 显示上次的心情
-
-		System.out.print("当前的心情：");
-		String kibun = stdIn.next();
-
-		term(kibun);
+		try {
+			init(); // 显示上次的心情
+			System.out.print("当前的心情：");
+			String kibun = stdIn.next();
+			term(kibun);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			if (stdIn != null) {
+				stdIn.close();
+			}
+		}
 	}
 }

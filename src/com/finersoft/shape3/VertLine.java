@@ -21,7 +21,8 @@ public class VertLine extends AbstLine {
 	 * @return 返回字符串"VertLine(length:3)"。
 	 *			3的部分是长度所对应的值。
 	*/
-	public String toString() {
+	@Override
+		public String toString() {
 		return "VertLine(length:" + getLength()  + ")"; 
 	}
 
@@ -30,6 +31,7 @@ public class VertLine extends AbstLine {
      * 通过纵向排列竖线'|'进行绘图。
 	 * 循环显示长度个数的'|'及换行。
 	*/
+	@Override
 	public void draw() {
 		for (int i = 1; i <= getLength() ; i++)
 			System.out.println('|'); 

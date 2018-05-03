@@ -46,6 +46,7 @@ public abstract class AbstLine extends Shape {
 	 * @return 返回字符串"AbstLine(length:3)"。
 	 *			3的部分是长度所对应的值。
 	*/
+	@Override
 	public String toString() {
 		return "AbstLine(length:" + length + ")"; 
 	}

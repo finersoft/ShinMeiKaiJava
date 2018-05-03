@@ -7,9 +7,9 @@ class IntArray2 {
 		int[] a = new int[5];	// 数组的声明
 
 		for (int i = 0; i < a.length; i++)
-			a[i] = i + 1;
+		{		a[i] = i + 1;}
 
 		for (int i = 0; i < a.length; i++)
-			System.out.println("a[" + i + "] = " + a[i]);
+		{	System.out.println("a[" + i + "] = " + a[i]);}
 	}
 }

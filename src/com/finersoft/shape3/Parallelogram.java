@@ -9,11 +9,12 @@ public class Parallelogram extends Shape implements Plane2D {
 		this.width = width;	this.height = height;
 	}
 
+	@Override
 	public String toString() {							// 字符串表示 
 		return "Parallelogram(width:" + width + ", height:" + height + ")";
 	}
-
-	public void draw() {								// 绘图
+	@Override
+		public void draw() {								// 绘图
 		for (int i = 1; i <= height; i++) {
 			for (int j = 1; j <= height - i; j++) System.out.print(' '); 
 			for (int j = 1; j <= width; j++) System.out.print('#'); 
@@ -21,5 +22,6 @@ public class Parallelogram extends Shape implements Plane2D {
 		}
 	}
 
+	@Override
 	public int getArea() { return width * height; }		// ○计算面积
 }

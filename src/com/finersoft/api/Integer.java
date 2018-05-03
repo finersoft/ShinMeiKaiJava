@@ -8,8 +8,20 @@ package com.finersoft.api;
 
 
 public final class Integer extends Number implements Comparable<Integer> {
-	public static final int MIN_VALUE = 0x80000000;		// int型的最小值
-	public static final int MAX_VALUE = 0x7fffffff;		// int型的最大值
+	/**
+	 * serialVersionUID
+	 */
+	private static final long serialVersionUID = -7949909941218027413L;
+	
+	/**
+	 *  int型的最小值
+	 */
+	public static final int MIN_VALUE = 0x80000000;		
+	 
+	/**
+	 *int型的最大值 
+	 */
+	public static final int MAX_VALUE = 0x7fffffff;	
 	
 	/**
 	 * 将整型转换成十六进制字符串
