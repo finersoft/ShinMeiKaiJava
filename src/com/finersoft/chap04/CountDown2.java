@@ -1,8 +1,14 @@
 package com.finersoft.chap04;
-// 从某一正整数值倒数到0（其２）
+
 
 import java.util.Scanner;
 
+/**
+ * 名称：从某一正整数值倒数到0（其２）<br/>
+ * 说明：<br/>
+ * @author Finersoft
+ * @date 2018年5月4日
+ */
 class CountDown2 {
 
 	public static void main(String[] args) {
