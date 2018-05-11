@@ -15,8 +15,10 @@ class Average2 {
 			int x = stdIn.nextInt();
 			System.out.print("y的值：");
 			int y = stdIn.nextInt();
-			double ave = (x + y) / 2.0; // 平均值
-			System.out.println("x和y的平均值为" + ave + "。"); // 显示
+			 // 平均值
+			double ave = (x + y) / 2.0;
+			// 显示
+			System.out.println("x和y的平均值为" + ave + "。"); 
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
